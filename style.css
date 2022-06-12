@@ -1,0 +1,516 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    --gradient-primary: linear-gradient(180deg, 
+                        hsl(230, 90%, 60%) 0%,
+                        hsl(200, 90%, 60%) 100%);
+    --color-danger: hsl(355, 100%, 73%);
+    --color-gray-01: hsl(217, 16%, 16%);
+    --color-gray-02: hsl(229, 16%, 20%);
+    --color-gray-03: hsl(230, 16%, 28%);
+    --color-light-gray: hsl(223, 14%, 90%);
+    --color-light-gray-02: hsl(219, 12%, 72%);
+    --color-light-gray-03: hsl(200, 18%, 90%);
+    --color-fill-images: #516385;
+
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Quicksand', sans-serif;
+
+    /*========== Borders ==========*/
+    --card-border-radius: 0;
+    --border-radius-1: 0;
+    --border-radius-2: 0;
+    --border-radius-3: 0;
+
+    /*========== Card Paddings ==========*/
+    --card-padding: 0;
+    --padding-1: 0;
+
+    /*========== Shadows ==========*/
+    --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/*========== Tablets ==========*/
+@media screen and (max-width: 1200px) {
+
+}
+
+/*========== Desktops ==========*/
+@media screen and (max-width: 768px) {
+
+}
+
+/*=============== BASE ===============*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--body-font);
+    background: var(--color-gray-01);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+button {
+    background: none;
+    cursor: pointer;
+}
+
+.show-more {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    color: var(--color-light-gray );
+}
+
+.show-more:hover {
+    color: hsl(200, 90%, 60%);
+}
+
+.show-more:hover svg path {
+    fill: hsl(200, 90%, 60%);
+}
+
+/*=============== ASIDE ===============*/
+
+aside {
+    height: 100vh;
+    padding-block: 3.2rem 4.2rem;
+    padding-inline: 2.4rem;
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--color-gray-02);
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+aside nav a,
+aside .logout-button {
+    padding: 1.2rem;
+    border-radius: 1.6rem;
+}
+
+aside nav a:hover svg path {
+    fill: hsl(200, 90%, 60%);
+}
+
+aside nav a:focus {
+    background: var(--gradient-primary);
+}
+
+aside nav a:focus svg path {
+    fill: white;
+}
+
+aside .logout-button:hover svg path {
+    fill: var(--color-danger);
+}
+
+/*=============== CONTAINER ===============*/
+
+.container {
+    margin-left: 11.2rem;
+}
+
+/*=============== CONTAINER TOP ===============*/
+
+.container .top {
+    padding-inline: 3.2rem;
+    padding-top: 3.2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*====== TOP .search-bar ======*/
+.container .top .search-bar {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    background: var(--color-gray-03);
+    border-radius: 10rem;
+    padding: 1.6rem 2.4rem;
+
+    width: 43vw;
+    max-width: 60rem;
+}
+
+.container .top .search-bar a svg:hover path {
+    fill: hsl(200, 90%, 60%);
+}
+
+.container .top .search-bar input {
+    background: none;
+    width: 100%;
+
+    color: white;
+}
+
+.container .top .search-bar input::placeholder {
+    color: var(--color-light-gray);
+}
+
+/*====== TOP .options-user ======*/
+.container .top .options-user {
+    display: flex;
+    align-items: center;
+}
+
+/*====== TOP .options ======*/
+.container .top .options {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    margin-inline: 3.2rem;
+}
+
+.container .top .options a {
+    width: fit-content;
+    height: fit-content;
+    padding: 1.2rem;
+    background: var(--color-gray-03);
+    border-radius: 50%;
+}
+
+.container .top .options a:hover svg path {
+    fill: hsl(200, 90%, 60%);
+}
+
+.container .top .options a:focus svg path {
+    fill: white;
+}
+
+.container .top .options a:focus {
+    background: var(--gradient-primary);
+}
+
+/*====== TOP .user ======*/
+.container .top .user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    padding-left: 3.2rem;
+    border-left: 1px solid var(--color-light-gray-02);
+}
+
+.container .top .user .container-pic {
+    width: 5.6rem;
+    height: 5.6rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.container .top .user .container-pic img {
+    width: 5.6rem;
+    transform: translateY(-6px);
+}
+
+.container .top .user .container-info {
+    display: flex;
+    align-items: center;
+    gap: 6.2rem;
+}
+
+.container .top .user .container-info h4 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    color: var(--color-light-gray);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.container .top .user .container-info h4 span {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    color: var(--color-light-gray-02);
+}
+
+.container .top .user .container-info button:hover svg path{
+    fill: hsl(200, 90%, 60%);
+}
+
+/*=============== CONTAINER CONTENT ===============*/
+
+.container .content {
+    padding-top: 5rem;
+    padding-left: 3.2rem;
+}
+
+/*====== CONTENT .popular ======*/
+.container .content .popular {
+
+}
+
+/*====== CONTENT .popular .head ======*/
+.container .content .popular .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-right: 3.2rem;
+}
+
+.container .content .popular .head h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+
+    color: var(--color-light-gray); 
+}
+
+/*====== CONTENT .popular .cards ======*/
+.container .content .popular .cards {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2.4rem;
+}
+
+.container .content .popular .cards .card {
+    background: var(--color-fill-images);
+    width: 48.61vw;
+    height: 21.18vw;
+
+    padding: 2.4rem;
+
+    border-radius: 2.4rem;
+    
+    display: flex;
+    align-items: flex-end;
+}
+
+.container .content .popular .cards .card:nth-child(1) {
+    background: url(./assets/pic8.jpg);
+    background-size: cover;
+}
+
+.container .content .popular .cards .card:nth-child(2) {
+    background: url(./assets/pic2.jpg);
+    background-size: cover;
+}
+
+.container .content .popular .card .card-info {
+    padding: 2.4rem 3.2rem;
+    background: rgba(0, 0, 0, 0.32);
+    border: 1px solid #B8B8B8;
+    border-radius: 1.2rem;
+    
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.container .content .popular .card .card-info h4 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.container .content .popular .card .card-info h4 span {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+/*====== CONTENT .results ======*/
+.container .content .results {
+    margin-top: 4.2rem;
+    padding-right: 3.2rem;
+}
+
+/*====== CONTENT .results .head ======*/
+
+.container .content .results .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .content .results .head .categories {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.container .content .results .head .categories a {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    padding: 0.8rem 2.4rem 0.8rem 0.8rem;
+    border-radius: 10rem;
+
+    width: fit-content;
+    height: fit-content;
+
+    background: rgba(61, 153, 245, 0.24);
+}
+
+.container .content .results .head .categories a .icon-container {
+    padding: 0.8rem;
+    border-radius: 50%;
+    background: white;
+}
+
+.container .content .results .head .categories a .icon-container svg {
+    display: block;
+}
+
+.container .content .results .head .categories a p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--color-light-gray);
+}
+
+.container .content .results .head .categories a:focus {
+    background: linear-gradient(180deg, #3D5CF5 0%, #3DB8F5 100%);
+}
+
+/*====== CONTENT .results .cards ======*/
+.container .content .results .cards {
+    margin-top: 3.2rem;
+    padding-bottom: 2.4rem;
+
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+}
+
+.container .content .results .card {
+    padding-inline: 1.2rem;
+    padding-block: 1.2rem 2.4rem;
+
+    border-radius: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    background: var(--color-gray-03);
+}
+
+.container .content .results .card .pic-container {
+    width: 20.8rem;
+    height: 14rem;
+    background: var(--color-fill-images);
+
+    border-radius: 1.6rem;
+
+    overflow: hidden;
+}
+
+.container .content .results .card .pic-container img {
+    width: 101%;
+}
+
+.container .content .results .card .price-fav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .content .results .card .price {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.container .content .results .card .price h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: white;
+}
+
+.container .content .results .card .fav {
+    padding: 0.8rem;
+
+    background: rgba(61, 153, 245, 0.24);
+    border: none;
+    border-radius: 50%;
+}
+
+.container .content .results .card .fav svg {
+    display: block;
+}
+
+.container .content .results .card .fav:focus {
+    background: var(--gradient-primary)
+}
+
+.container .content .results .card .fav:hover {
+    border: none;
+}
+
+.container .content .results .card p {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--color-light-gray);
+}
+
+.container .content .results .card button {
+    padding: 1.6rem 5rem;
+
+    border: 1px solid #6B8694;
+    border-radius: 0.8rem;
+
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--color-light-gray-03);
+}
+
+.container .content .results .card button:hover {
+    border: 1px solid hsl(200, 90%, 60%);
+    color: hsl(200, 90%, 60%);
+}
